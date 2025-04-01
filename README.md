@@ -6,7 +6,7 @@
 
 Hello, I'm **Molin Dave**. Tired of Adobe's high pricing for its reader, I developed this open-source PDF Viewer as a free alternative. This application is built in Python using Tkinter for the graphical interface, PyMuPDF for rendering PDFs, and several other open-source libraries for conversion and PDF manipulation. 
 
-This app not only allows you to view PDF files but also provides advanced features like multi-tab viewing, conversion to and from Word documents, basic printing capabilities, and file security management (locking/unlocking, setting permissions, and removing passwords). Additionally, I've introduced theme support with a Dark Theme option.
+This app not only allows you to view PDF files but also provides advanced features like multi-tab viewing, conversion to and from Word documents, basic printing capabilities, and file security management (locking/unlocking, setting permissions, and removing passwords).
 
 ## Features
 
