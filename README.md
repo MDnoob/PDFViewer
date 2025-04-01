@@ -53,12 +53,8 @@ This app not only allows you to view PDF files but also provides advanced featur
 - **Arrow Keys / Page Up/Down:** Navigate between pages.
 
 ## Installation
+- Just download the latest release from the repository.
 
-### Prerequisites
-- **Python 3.x** installed on your system.
-- The following Python libraries:
-  - `tkinter` (usually comes with Python)
-  - `PyMuPDF` (`pip install pymupdf`)
-  - `pikepdf` (`pip install pikepdf`)
-  - `pdf2docx` (`pip install pdf2docx`)
-  - `docx2pdf` (`pip install docx2pdf`)
+### Developed by Molin Dave.
+- Contributions, issues, and feature requests are welcome!
+- If you have any questions or suggestions, feel free to reach out.
