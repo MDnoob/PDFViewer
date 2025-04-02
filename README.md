@@ -42,7 +42,7 @@ This app not only allows you to view PDF files but also provides advanced featur
 - **Basic Print Functionality:**  
   Send your PDF file to the printer with a simple print dialog that lets you choose the number of copies. (Note: Printing is implemented for Windows systems using the OS print command.)
 
-### Theme and Customization
+### Theme and Customization (Available only for Beta testing)
 - **Dark Theme Option:**  
   Under the **Options** menu, you can switch to a Dark Theme. This adjusts the UI colors to a black and grey combination (including buttons and backgrounds) for a more comfortable viewing experience in low light environments.
 
