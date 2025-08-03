@@ -1,132 +1,155 @@
-**PDF Viewer - An Open Source Alternative**
+# 📄 PDF Viewer - An Open Source Alternative
+
 **Version 1.2**
 
-**Overview**
-Hello, I'm Molin Dave. Tired of Adobe's high pricing for its reader, I developed this open-source PDF Viewer as a free alternative. This application is built in Python using Tkinter for the graphical interface, PyMuPDF for rendering PDFs, and several other open-source libraries for conversion and PDF manipulation.
+An open-source, lightweight, and feature-rich PDF Viewer built in **Python**.
+Developed as a free alternative to Adobe Acrobat Reader, it supports PDF viewing, conversions, printing, and enhanced security — all wrapped in a clean, customizable interface.
 
-This app not only allows you to view PDF files but also provides advanced features like multi-tab viewing, conversion to and from Word documents, basic printing capabilities, and enhanced file security management with improved password protection workflows.
+---
 
-**Features**
-PDF Viewing
-Multi-tab Interface:
-Open multiple PDF files simultaneously in separate tabs with right-click context menu support.
+## 🚀 Overview
 
-Scrolling and Navigation:
-Use mouse wheel scrolling, page navigation buttons, and keyboard shortcuts to navigate through your PDF.
+Hi, I'm **Molin Dave** 👋
 
-Zoom In/Out:
-Easily adjust the zoom level using on-screen buttons or keyboard shortcuts (+ and -).
+Tired of Adobe's high pricing for its reader, I developed this open-source PDF Viewer as a **free and user-friendly alternative**.
+Built with:
 
-Jump to Page:
-Direct page navigation with a dedicated page input field and "Go" button.
+* **Tkinter** → GUI
+* **PyMuPDF** → PDF rendering
+* **pikepdf & pdf2docx/docx2pdf** → File security & conversion
 
-File Conversion
-PDF to Word Conversion:
-Convert your PDF files into editable Word documents with threading support for better performance.
+This app does more than just viewing PDFs:
+✔ Multi-tab support
+✔ PDF ↔ Word conversion
+✔ Basic printing
+✔ Secure file locking/unlocking
+✔ Dark mode & keyboard shortcuts
 
-Word to PDF Conversion:
-Convert DOCX files back into PDFs.
+---
 
-File Security & Permissions
-Lock PDF:
-Secure your PDF by setting a password with an improved single-dialog interface that includes both password and confirmation fields for better user experience.
+## ✨ Features
 
-Unlock PDF:
-Remove password protection from your PDF files (formerly "Remove Password" - renamed for clarity).
+### 📑 PDF Viewing
 
-**Enhanced Password Handling:
-**
-Hybrid PyMuPDF and pikepdf library support for better compatibility with various PDF encryption methods
+* **Multi-tab Interface** → Open multiple PDFs with right-click context menu
+* **Smooth Navigation** → Mouse wheel, arrow keys, Page Up/Down
+* **Zoom Controls** → Buttons or keyboard (`+` / `-`)
+* **Jump to Page** → Input field with "Go" button
 
-Automatic password prompts for encrypted files
+### 🔄 File Conversion
 
-Support for complex encryption schemes
+* **PDF ➝ Word** → Convert with threading for smooth performance
+* **Word ➝ PDF** → Convert DOCX files back into PDFs
 
-Manage Permissions:
-Note: Advanced permissions management is temporarily simplified due to library compatibility issues and will be enhanced in future releases.
+### 🔐 File Security & Permissions
 
-Printing
-Basic Print Functionality:
-Send your PDF file to the printer using Windows OS print command integration.
+* **Lock PDF** → Add password (single dialog with confirmation)
+* **Unlock PDF** → Remove password protection
+* **Enhanced Password Handling** → Hybrid PyMuPDF + pikepdf support
+* **Automatic Prompts** → Enter passwords when opening encrypted files
+* **Future Support** → Advanced permissions (coming soon)
 
-Theme and Customization
-Dark Theme Option:
-Toggle between light and dark themes from the View menu. The dark theme provides a comfortable viewing experience in low-light environments with proper canvas background updates.
+### 🖨 Printing
 
-Keyboard Shortcuts
-Ctrl+O: Open PDF file
+* **Basic Print Functionality** → Integrated with Windows OS print command
 
-+/=: Zoom in
+### 🎨 Theme & Customization
 
--: Zoom out
+* **Dark Mode** → Toggle via View menu for comfortable reading
+* **Dynamic UI** → Proper canvas updates when switching themes
 
-Arrow Keys / Page Up/Down: Navigate between pages
+### ⌨ Keyboard Shortcuts
 
-Mouse Wheel: Scroll through pages
+| Shortcut                 | Action               |
+| ------------------------ | -------------------- |
+| `Ctrl + O`               | Open PDF             |
+| `+` / `=`                | Zoom in              |
+| `-`                      | Zoom out             |
+| Arrow Keys / PgUp / PgDn | Navigate pages       |
+| Mouse Wheel              | Scroll through pages |
 
-**Installation**
-Option 1: Run from Source
-Clone this repository
+---
 
-**Install required dependencies:
-**
-bash
+## 🛠 Installation
+
+### Option 1: Run from Source
+
+```bash
+git clone https://github.com/your-username/pdf-viewer.git
+cd pdf-viewer
 pip install -r requirements.txt
-Run the application:
-
-bash
 python main.py
-Option 2: Download Executable
-Download the latest release executable from the repository releases page - no Python installation required.
+```
 
-**Building from Source
-**To create a standalone executable:
+### Option 2: Download Executable
 
-bash
-pyinstaller --onefile --windowed --icon="resources/pdf_file_icon.ico" --add-data "resources;resources" --name="PDF_Viewer" main.py
-**Requirements**
-Python 3.8+
+* Get the latest release from the [Releases Page](#)
+* No Python installation required
 
-PyMuPDF (fitz)
+### Building from Source
 
-pikepdf
+```bash
+pyinstaller --onefile --windowed \
+  --icon="resources/pdf_file_icon.ico" \
+  --add-data "resources;resources" \
+  --name="PDF_Viewer" main.py
+```
 
-pdf2docx
+---
 
-docx2pdf
+## 📦 Requirements
 
-tkinter (usually included with Python)
+* Python **3.8+**
+* [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/)
+* [pikepdf](https://pikepdf.readthedocs.io/)
+* [pdf2docx](https://github.com/dothinking/pdf2docx)
+* [docx2pdf](https://github.com/AlJohri/docx2pdf)
+* Tkinter (included in standard Python distributions)
 
-**Project Structure
-**The application now features a modular architecture with organized code files:
+---
 
-main.py - Application entry point
+## 🗂 Project Structure
 
-pdf_viewer.py - Main viewer class
+```
+pdf-viewer/
+│── main.py              # Application entry point
+│── pdf_viewer.py        # Main viewer class
+│── pdf_miner.py         # PDF processing & rendering
+│── pdf_security.py      # Security & encryption
+│── pdf_converter.py     # Document conversion
+│── ui_components.py     # UI layout & theme handling
+│── dialogs.py           # Custom dialogs
+│── resources/           # Icons & assets
+```
 
-pdf_miner.py - PDF processing and rendering
+---
 
-pdf_security.py - Security and encryption features
+## 🆕 What’s New in v1.2
 
-pdf_converter.py - Document conversion functionality
+* 🔐 **Enhanced Security** → Improved locking/unlocking with better error handling
+* 🧩 **Modular Architecture** → Cleaner, maintainable code
+* 🔑 **Improved Password Dialog** → Single window with confirmation
+* ⚡ **Better Compatibility** → Support for more PDF encryption methods
+* 🖌 **Cleaner UI** → Renamed buttons & improved feedback
+* 🛠 **Build Support** → PyInstaller config included
 
-ui_components.py - UI layout and theme management
+---
 
-dialogs.py - Custom dialog boxes
+## 🤝 Contributing
 
-**What's New in Version 1.2
-**Enhanced Security Features: Improved PDF locking/unlocking with better error handling
+Contributions, issues, and feature requests are always welcome!
 
-Modular Architecture: Restructured codebase for better maintainability
+* Fork the repo
+* Create your feature branch (`git checkout -b feature/AmazingFeature`)
+* Commit your changes (`git commit -m 'Add AmazingFeature'`)
+* Push to the branch (`git push origin feature/AmazingFeature`)
+* Open a Pull Request
 
-Improved Password Dialog: Single modal window with password confirmation
+---
 
-Better Compatibility: Enhanced support for various PDF encryption methods
+## 📬 Contact
 
-Cleaner UI: Renamed buttons and improved user feedback
+**Developed by:** Molin Dave
+If you have suggestions, feedback, or questions → Feel free to open an issue or reach out!
 
-Build Support: Included PyInstaller configuration for executable creation
-
-**Developed by Molin Dave.
-**Contributions, issues, and feature requests are welcome!
-If you have any questions or suggestions, feel free to reach out.
+---
