@@ -1,0 +1,15 @@
+PDF Viewer/
+├── main.py
+├── pdf_viewer.py
+├── pdf_miner.py
+├── pdf_security.py
+├── pdf_converter.py
+├── ui_components.py
+├── dialogs.py
+└── resources/
+    ├── pdf_file_icon.ico
+    ├── printer.png
+    ├── zoomin.png
+    ├── zoomout.png
+    ├── uparrow.png
+    └── downarrow.png
